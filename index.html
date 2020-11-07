@@ -195,7 +195,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">更新于</span>
-                <time title="修改时间：2020-11-07 18:23:34" itemprop="dateModified" datetime="2020-11-07T18:23:34+08:00">2020-11-07</time>
+                <time title="修改时间：2020-11-07 22:44:25" itemprop="dateModified" datetime="2020-11-07T22:44:25+08:00">2020-11-07</time>
               </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
@@ -226,42 +226,29 @@
 <p>矩阵的转置是指将矩阵的主对角线翻转，<strong>交换矩阵的行索引与列索引</strong>。</p>
 <p><strong>示例 1：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：[[1,2,3],[4,5,6],[7,8,9]]</span><br><span class="line">输出：[[1,4,7],[2,5,8],[3,6,9]]</span><br></pre></td></tr></table></figure>
-
 <p><strong>示例 2：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：[[1,2,3],[4,5,6]]</span><br><span class="line">输出：[[1,4],[2,5],[3,6]]</span><br></pre></td></tr></table></figure>
-
 <p><strong>提示：</strong></p>
 <ol>
 <li><code>1 &lt;= A.length &lt;= 1000</code></li>
 <li><code>1 &lt;= A[0].length &lt;= 1000</code></li>
 </ol>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">transpose</span>(<span class="params">A</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    :type A: List[List[int]]</span></span><br><span class="line"><span class="string">    :rtype: List[List[int]]</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    nrows = len(A[<span class="number">0</span>])  <span class="comment"># 转置后的行数</span></span><br><span class="line">    ncols = len(A)  <span class="comment"># 转置后的列数</span></span><br><span class="line">    res = [[<span class="literal">None</span>]*ncols <span class="keyword">for</span> i <span class="keyword">in</span> range(nrows)]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(ncols):</span><br><span class="line">    	<span class="keyword">for</span> j <span class="keyword">in</span> range(nrows):</span><br><span class="line">    		res[j][i] = A[i][j]</span><br><span class="line">    <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
-
-
-
 <h1 id="面试题-17-10-主要元素"><a href="#面试题-17-10-主要元素" class="headerlink" title="面试题 17.10. 主要元素"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/find-majority-element-lcci/">面试题 17.10. 主要元素</a></h1><p>数组中<strong>占比超过一半</strong>的元素称之为主要元素。给定一个<strong>整数</strong>数组，找到它的主要元素。若没有，返回-1。</p>
 <p><strong>示例 1：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：[1,2,5,9,5,9,5,5,5]</span><br><span class="line">输出：5</span><br></pre></td></tr></table></figure>
-
 <p><strong>示例 2：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：[3,2]</span><br><span class="line">输出：-1</span><br></pre></td></tr></table></figure>
-
 <p><strong>示例 3：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：[2,2,1,1,1,2,2]</span><br><span class="line">输出：2</span><br></pre></td></tr></table></figure>
-
 <p><strong>说明：</strong><br>你有办法在<strong>时间复杂度为 O(N)，空间复杂度为 O(1)</strong> 内完成吗？</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 时间复杂度O(N),空间复杂度O(N)</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">majorityElement</span>(<span class="params">nums</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    :type nums: List[int]</span></span><br><span class="line"><span class="string">    :rtype: int</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    n = len(nums)</span><br><span class="line">    res_dict = &#123;&#125;</span><br><span class="line">    <span class="keyword">for</span> num <span class="keyword">in</span> nums:</span><br><span class="line">    	res_dict[num] = res_dict.get(num,<span class="number">0</span>) + <span class="number">1</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> key, val <span class="keyword">in</span> res_dict.items():</span><br><span class="line">        <span class="keyword">if</span> val &gt; (n // <span class="number">2</span>): <span class="comment"># 占比超过一半，nice shot</span></span><br><span class="line">        	<span class="keyword">return</span> key</span><br><span class="line">    <span class="keyword">return</span> <span class="number">-1</span></span><br></pre></td></tr></table></figure>
-
 <p>进阶：如何在时间复杂度为 O(N)，空间复杂度为 O(1) 的情况下实现？</p>
 <h2 id="摩尔投票法"><a href="#摩尔投票法" class="headerlink" title="摩尔投票法"></a>摩尔投票法</h2><p>该算法解决的问题是如何在任意多的候选人（选票无序），选出获得票数最多的候选人。</p>
 <p>算法的比较次数最多是选票数的两倍，可以在<strong>O(n)时间内选出获票最多的，空间开销为O(1)</strong></p>
 <h3 id="算法步骤"><a href="#算法步骤" class="headerlink" title="算法步骤"></a>算法步骤</h3><blockquote>
 <p>两个阶段：</p>
-</blockquote>
-<blockquote>
 <p>1、pairing：两个不同选票的人进行对抗，并会同时击倒对方，当剩下的人都是同一阵营，相同选票时，结束。</p>
-</blockquote>
-<blockquote>
 <p>2、counting：计数阶段（验证，有可能存在所有候选人的选票都是不是大多数），对最后剩下的候选人进行统计票数，判断票数是否超过总票数的一半，若超过，则有效，找到了最多的候选人。</p>
 </blockquote>
 <p>在实际的代码实现中，pairing阶段是可以简化的：</p>
@@ -272,18 +259,13 @@
 <p>​否则，cnt -= 1.</p>
 <p>最后，还要统计最后剩下的majority的总票数是否超过一半。</p>
 </blockquote>
-<p><img src="/2020/10/25/leetcode-array-notebook/%E6%91%A9%E5%B0%94%E6%8A%95%E7%A5%A8%E7%AE%97%E6%B3%95%E4%BC%AA%E4%BB%A3%E7%A0%81.png"></p>
+<p><img src="/2020/10/25/leetcode-array-notebook/摩尔投票算法伪代码.png" alt></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">majorityElement</span>(<span class="params">nums</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    :type nums: List[int]</span></span><br><span class="line"><span class="string">    :rtype: int</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    n = len(nums)</span><br><span class="line">    majority = <span class="number">0</span></span><br><span class="line">    cnt = <span class="number">0</span></span><br><span class="line">    <span class="comment"># 成对抵消</span></span><br><span class="line">    <span class="keyword">for</span> num <span class="keyword">in</span> nums:</span><br><span class="line">    	<span class="keyword">if</span> cnt == <span class="number">0</span>:</span><br><span class="line">    		majority =num</span><br><span class="line">    		cnt += <span class="number">1</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">if</span> majority == num:</span><br><span class="line">            	cnt += <span class="number">1</span></span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">            	cnt -= <span class="number">1</span></span><br><span class="line">    <span class="comment"># 计数验证</span></span><br><span class="line">    cnt = <span class="number">0</span></span><br><span class="line">    <span class="keyword">for</span> num <span class="keyword">in</span> nums:</span><br><span class="line">        <span class="keyword">if</span> num == majority:</span><br><span class="line">            cnt += <span class="number">1</span></span><br><span class="line">    <span class="keyword">if</span> cnt &lt;= n // <span class="number">2</span>:</span><br><span class="line">        majority = <span class="number">-1</span></span><br><span class="line">    <span class="keyword">return</span> majority</span><br></pre></td></tr></table></figure>
-
-
-
 <h1 id="977-有序数组的平方"><a href="#977-有序数组的平方" class="headerlink" title="977. 有序数组的平方"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/squares-of-a-sorted-array/">977. 有序数组的平方</a></h1><p>给定一个按非递减顺序排序的整数数组 <code>A</code>，返回每个数字的平方组成的新数组，要求也按非递减顺序排序。</p>
 <p><strong>示例 1：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：[-4,-1,0,3,10]</span><br><span class="line">输出：[0,1,9,16,100]</span><br></pre></td></tr></table></figure>
-
 <p><strong>示例 2：</strong></p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">输入：[-7,-3,2,3,11]</span><br><span class="line">输出：[4,9,9,49,121]</span><br></pre></td></tr></table></figure>
-
 <p><strong>提示：</strong></p>
 <ol>
 <li><code>1 &lt;= A.length &lt;= 10000</code></li>
@@ -297,8 +279,8 @@
 <li><strong>比较类排序</strong>：通过比较来决定元素间的相对次序，由于其时间复杂度不能突破O(nlogn)，因此也称为非线性时间比较类排序。</li>
 <li><strong>非比较类排序</strong>：不通过比较来决定元素间的相对次序，它可以突破基于比较排序的时间下界，以线性时间运行，因此也称为线性时间非比较类排序。 </li>
 </ul>
-<p><img src="/2020/10/25/leetcode-array-notebook/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95.svg"></p>
-<p><img src="/2020/10/25/leetcode-array-notebook/%E6%8E%92%E5%BA%8F%E7%AE%97%E6%B3%95%E6%97%B6%E7%A9%BA%E5%A4%8D%E6%9D%82%E5%BA%A6.png"></p>
+<p><img src="/2020/10/25/leetcode-array-notebook/排序算法.svg" alt></p>
+<p><img src="/2020/10/25/leetcode-array-notebook/排序算法时空复杂度.png" alt></p>
 <h3 id="选择排序"><a href="#选择排序" class="headerlink" title="选择排序"></a>选择排序</h3><blockquote>
 <p>原理：首先在未排序序列中找到最小（大）元素，存放到排序序列的起始位置，然后，再从剩余未排序元素中继续寻找最小（大）元素，然后放到已排序序列的末尾。以此类推，直到所有元素均排序完毕。 </p>
 <p>在无序数组中</p>
@@ -307,10 +289,12 @@
 <p>……</p>
 <p>第n-1次遍历，找到最小的数值与第n-1个元素交换，最终排序完成。</p>
 </blockquote>
-<p>时间复杂度：<br>$$<br>O(n^2)<br>$$</p>
-<p>空间复杂度：<br>$$<br>O(1)<br>$$<br><img src="/2020/10/25/leetcode-array-notebook/%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F.gif"></p>
+<p>时间复杂度：</p>
+<script type="math/tex; mode=display">
+O(n^2)</script><p>空间复杂度：</p>
+<script type="math/tex; mode=display">
+O(1)</script><p><img src="/2020/10/25/leetcode-array-notebook/选择排序.gif" alt></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sortedSquares</span>(<span class="params">A</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    :type A: List[int]</span></span><br><span class="line"><span class="string">    :rtype: List[int]</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    res = []</span><br><span class="line">    <span class="keyword">for</span> num <span class="keyword">in</span> A:</span><br><span class="line">    	res.append(num * num)</span><br><span class="line">	</span><br><span class="line">	<span class="comment"># 选择排序</span></span><br><span class="line">    n = len(res)</span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):</span><br><span class="line">        index = i</span><br><span class="line">        <span class="keyword">for</span> j <span class="keyword">in</span> range(i+<span class="number">1</span>,n):</span><br><span class="line">            <span class="keyword">if</span> res[j] &lt; res[index]:</span><br><span class="line">            	index = j</span><br><span class="line"></span><br><span class="line">    	res[index], res[i] = res[i], res[index]</span><br><span class="line">    <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
-
 <h3 id="冒泡排序"><a href="#冒泡排序" class="headerlink" title="冒泡排序"></a>冒泡排序</h3><blockquote>
 <p>它重复地走访过要排序的数列，一次比较两个元素，如果它们的顺序错误就把它们交换过来。走访数列的工作是重复地进行直到没有再需要交换，也就是说该数列已经排序完成。</p>
 <p>升序排序：</p>
@@ -319,10 +303,12 @@
 <p>3、第二趟：然后针对所有的元素重复以上的步骤，除了最后一个。</p>
 <p>4、第n-1趟：完成排序</p>
 </blockquote>
-<p>时间复杂度：<br>$$<br>O(n^2)<br>$$<br>空间复杂度：<br>$$<br>O(1)<br>$$</p>
-<p><img src="/2020/10/25/leetcode-array-notebook/%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.gif"></p>
+<p>时间复杂度：</p>
+<script type="math/tex; mode=display">
+O(n^2)</script><p>空间复杂度：</p>
+<script type="math/tex; mode=display">
+O(1)</script><p><img src="/2020/10/25/leetcode-array-notebook/冒泡排序.gif" alt></p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sortedSquares</span>(<span class="params">A</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    :type A: List[int]</span></span><br><span class="line"><span class="string">    :rtype: List[int]</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    n = len(A)</span><br><span class="line">    res = []</span><br><span class="line">    <span class="keyword">for</span> num <span class="keyword">in</span> A:</span><br><span class="line">    	res.append(num * num)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 冒泡排序</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):  <span class="comment"># n-1趟</span></span><br><span class="line">    	<span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">0</span>,n<span class="number">-1</span>-i):</span><br><span class="line">    		<span class="keyword">if</span> res[j+<span class="number">1</span>] &lt; res[j]:</span><br><span class="line">    			res[j+<span class="number">1</span>], res[j] = res[j], res[j+<span class="number">1</span>]</span><br><span class="line">		</span><br><span class="line">    <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
-
 <p>优化：</p>
 <blockquote>
 <ul>
@@ -331,17 +317,16 @@
 </ul>
 </blockquote>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sortedSquares</span>(<span class="params">A</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    :type A: List[int]</span></span><br><span class="line"><span class="string">    :rtype: List[int]</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    n = len(A)</span><br><span class="line">    res = []</span><br><span class="line">    <span class="keyword">for</span> num <span class="keyword">in</span> A:</span><br><span class="line">    	res.append(num * num)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 冒泡排序</span></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n):  <span class="comment"># n-1趟</span></span><br><span class="line">        FLAG = <span class="literal">False</span></span><br><span class="line">    	<span class="keyword">for</span> j <span class="keyword">in</span> range(<span class="number">0</span>,n<span class="number">-1</span>-i):</span><br><span class="line">    		<span class="keyword">if</span> res[j+<span class="number">1</span>] &lt; res[j]:</span><br><span class="line">    			res[j+<span class="number">1</span>], res[j] = res[j], res[j+<span class="number">1</span>]</span><br><span class="line">                FLAG = <span class="literal">True</span></span><br><span class="line">        <span class="keyword">if</span> <span class="keyword">not</span> FLAG:  <span class="comment"># 说明这一轮没有发生元素交换，后面的元素已经有序，不需要再遍历比较</span></span><br><span class="line">            <span class="keyword">break</span></span><br><span class="line">		</span><br><span class="line">    <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
-
-
-
 <h3 id="插入排序"><a href="#插入排序" class="headerlink" title="插入排序"></a>插入排序</h3><blockquote>
 <p>通过构建有序序列，对于未排序数据，在已排序序列中从后向前扫描，比较未排序数据与已排序序列的大小关系，为未排序数据找到相应位置并插入。</p>
 <p>适合那些<strong>本身接近有序的数组</strong>以及小规模数组。</p>
 </blockquote>
-<p><img src="/2020/10/25/leetcode-array-notebook/%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F.gif"></p>
-<p>时间复杂度：<br>$$<br>O(n^2)<br>$$<br>空间复杂度：<br>$$<br>O(1)<br>$$</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sortedSquares</span>(<span class="params">A</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    :type A: List[int]</span></span><br><span class="line"><span class="string">    :rtype: List[int]</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    n = len(A)</span><br><span class="line">    res = []</span><br><span class="line">    <span class="keyword">for</span> num <span class="keyword">in</span> A:</span><br><span class="line">    	res.append(num * num)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n<span class="number">-1</span>):</span><br><span class="line">    	<span class="keyword">for</span> j <span class="keyword">in</span> range(i+<span class="number">1</span>,<span class="number">0</span>,<span class="number">-1</span>):</span><br><span class="line">    		<span class="keyword">if</span> res[j] &lt; res[j<span class="number">-1</span>]:</span><br><span class="line">    			res[j], res[j<span class="number">-1</span>] = res[j<span class="number">-1</span>], res[j]</span><br><span class="line">    		<span class="keyword">else</span>:  <span class="comment"># 说明已排序的所有元素都比res[j]小，不用在一一比较</span></span><br><span class="line">    			<span class="keyword">break</span></span><br><span class="line">    <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
-
+<p><img src="/2020/10/25/leetcode-array-notebook/插入排序.gif" alt></p>
+<p>时间复杂度：</p>
+<script type="math/tex; mode=display">
+O(n^2)</script><p>空间复杂度：</p>
+<script type="math/tex; mode=display">
+O(1)</script><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sortedSquares</span>(<span class="params">A</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    :type A: List[int]</span></span><br><span class="line"><span class="string">    :rtype: List[int]</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    n = len(A)</span><br><span class="line">    res = []</span><br><span class="line">    <span class="keyword">for</span> num <span class="keyword">in</span> A:</span><br><span class="line">    	res.append(num * num)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> i <span class="keyword">in</span> range(n<span class="number">-1</span>):</span><br><span class="line">    	<span class="keyword">for</span> j <span class="keyword">in</span> range(i+<span class="number">1</span>,<span class="number">0</span>,<span class="number">-1</span>):</span><br><span class="line">    		<span class="keyword">if</span> res[j] &lt; res[j<span class="number">-1</span>]:</span><br><span class="line">    			res[j], res[j<span class="number">-1</span>] = res[j<span class="number">-1</span>], res[j]</span><br><span class="line">    		<span class="keyword">else</span>:  <span class="comment"># 说明已排序的所有元素都比res[j]小，不用在一一比较</span></span><br><span class="line">    			<span class="keyword">break</span></span><br><span class="line">    <span class="keyword">return</span> res</span><br></pre></td></tr></table></figure>
 <h3 id="希尔排序"><a href="#希尔排序" class="headerlink" title="希尔排序"></a>希尔排序</h3><blockquote>
 <p>希尔排序也是一种插入排序，它是简单插入排序经过改进之后的一个更高效的版本，也称为缩小增量排序</p>
 </blockquote>
@@ -350,7 +335,8 @@
 <p>希尔排序在数组中采用<strong>跳跃式分组</strong>的策略，通过某个增量将数组元素划分为若干组，然后分组进行插入排序，随后逐步缩小增量，继续按组进行插入排序操作，<strong>直至增量为1</strong>。希尔排序通过这种策略使得整个数组在初始阶段达到<strong>从宏观上看基本有序</strong>，小的基本在前，大的基本在后。然后缩小增量，到增量为1时，<strong>其实多数情况下只需微调即可，不会涉及过多的数据移动</strong>。</p>
 </blockquote>
 <p>选择增量gap=length/2，缩小增量继续以gap = gap/2的方式，这种增量选择我们可以用一个序列来表示，{n/2,(n/2)/2…1}，称为<strong>增量序列</strong>。希尔排序的增量序列的选择与证明是个数学难题，称为希尔增量.</p>
-<p><img src="/2020/10/25/leetcode-array-notebook/%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F%E5%9B%BE%E8%A7%A3.png"></p>
+<p><img src="/2020/10/25/leetcode-array-notebook/希尔排序图解.png" alt></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">sortedSquares</span>(<span class="params">A</span>):</span></span><br><span class="line">    <span class="string">&quot;&quot;&quot;</span></span><br><span class="line"><span class="string">    :type A: List[int]</span></span><br><span class="line"><span class="string">    :rtype: List[int]</span></span><br><span class="line"><span class="string">    &quot;&quot;&quot;</span></span><br><span class="line">    n = len(A)</span><br><span class="line">    res = []</span><br><span class="line">    <span class="keyword">for</span> num <span class="keyword">in</span> A:</span><br><span class="line">        res.append(num * num)</span><br><span class="line"></span><br><span class="line">    gap = n // <span class="number">2</span></span><br><span class="line">    <span class="keyword">while</span> gap &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(gap, n):</span><br><span class="line">            j = i</span><br><span class="line">            <span class="keyword">while</span> j &gt;= gap:</span><br><span class="line">                <span class="keyword">if</span> res[j] &lt; res[j - gap]:</span><br><span class="line">                    res[j], res[j - gap] = res[j - gap], res[j]</span><br><span class="line">                j -= gap</span><br><span class="line">        gap //= <span class="number">2</span></span><br><span class="line">    <span class="keyword">return</span> res</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -410,16 +396,12 @@
       
           <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
 <h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
 <h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
 <h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
 <p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
       
@@ -495,11 +477,10 @@
 
       
           <h1 id="Week-01任务清单"><a href="#Week-01任务清单" class="headerlink" title="Week 01任务清单"></a>Week 01任务清单</h1><ul>
-<li><input checked disabled type="checkbox"> Head First Java: p1-26</li>
-<li><input checked disabled type="checkbox"> A Java Reference: 1.1-1.9</li>
+<li>[x] Head First Java: p1-26</li>
+<li>[x] A Java Reference: 1.1-1.9</li>
 </ul>
 <h2 id="Basic-Program-Structure"><a href="#Basic-Program-Structure" class="headerlink" title="Basic Program Structure"></a>Basic Program Structure</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/* Sample Program #1 */</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Hello</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span> <span class="params">(String[] arguments)</span></span>&#123;</span><br><span class="line">		System.out.println (<span class="string">&quot;Hello, world!&quot;</span>); <span class="comment">// Message + newline </span></span><br><span class="line">    &#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
 <blockquote>
 <ol>
 <li>java程序是定义的集合：类的定义、函数的定义</li>
@@ -511,7 +492,7 @@
 <li>写一个嵌入已有的框架的程序，也不是必须包含。已有的框架一般都会提供一个标准的main</li>
 </ol>
 </li>
-<li>注释：使用“/*  */”或者 “//”</li>
+<li>注释：使用“/<em>  </em>/”或者 “//”</li>
 <li>输出打印上的注意点：<ol>
 <li>print：不会换行</li>
 <li>println：会换行</li>
@@ -519,7 +500,7 @@
 </li>
 </ol>
 </blockquote>
-<h2 id="Compilation-and-Execution"><a href="#Compilation-and-Execution" class="headerlink" title="Compilation and Execution"></a>Compilation and Execution</h2><p><img src="/2020/09/25/CS61B-01HelloJava/1.png"></p>
+<h2 id="Compilation-and-Execution"><a href="#Compilation-and-Execution" class="headerlink" title="Compilation and Execution"></a>Compilation and Execution</h2><p><img src="/2020/09/25/CS61B-01HelloJava/1.png" alt></p>
 <p>上面这张图直观的展示了Java程序的编译与执行。</p>
 <h2 id="Simple-Values-and-Expressions"><a href="#Simple-Values-and-Expressions" class="headerlink" title="Simple Values and Expressions"></a>Simple Values and Expressions</h2>
       
